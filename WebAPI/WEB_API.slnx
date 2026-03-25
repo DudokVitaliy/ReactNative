@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="WEB_API.BLL/WEB_API.BLL.csproj" />
+  <Project Path="WEB_API.DAL/WEB_API.DAL.csproj" />
+  <Project Path="WEB_API/WEB_API.csproj" />
+</Solution>
