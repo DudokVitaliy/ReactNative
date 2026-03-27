@@ -586,11 +586,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\PD421_WebAPI\\WEB_API.DAL\\WEB_API.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\WEB_API.DAL.csproj",
       "projectName": "WEB_API.DAL",
-      "projectPath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\PD421_WebAPI\\WEB_API.DAL\\WEB_API.DAL.csproj",
+      "projectPath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\WEB_API.DAL.csproj",
       "packagesPath": "C:\\Users\\TechnoRoom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\PD421_WebAPI\\WEB_API.DAL\\obj\\",
+      "outputPath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

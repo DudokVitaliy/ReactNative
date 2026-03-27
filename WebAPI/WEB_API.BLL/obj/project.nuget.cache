@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rfv5UsAJcOk=",
+  "dgSpecHash": "D89asHm39yw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\PD421_WebAPI\\WEB_API.BLL\\WEB_API.BLL.csproj",
+  "projectFilePath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\WEB_API.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TechnoRoom\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.5\\microsoft.entityframeworkcore.10.0.5.nupkg.sha512",
     "C:\\Users\\TechnoRoom\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.5\\microsoft.entityframeworkcore.abstractions.10.0.5.nupkg.sha512",
