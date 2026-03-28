@@ -1,112 +1,166 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { Collapsible } from '@/components/ui/collapsible';
-import { ExternalLink } from '@/components/external-link';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
+import React, { useState } from 'react';
+import {
+    ScrollView,
+    TextInput,
+    TouchableOpacity,
+    ActivityIndicator,
+    View,
+} from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Fonts } from '@/constants/theme';
+import { useAddCategoryMutation } from '@/services/categoryApi';
 
 export default function TabTwoScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText
-          type="title"
-          style={{
-            fontFamily: Fonts.rounded,
-          }}>
-          Explore
-        </ThemedText>
-      </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
-    </ParallaxScrollView>
-  );
-}
+    const [name, setName] = useState('');
+    const [imageUrl, setImageUrl] = useState('');
+    const [error, setError] = useState('');
 
-const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
-  titleContainer: {
-    flexDirection: 'row',
-    gap: 8,
-  },
-});
+    const [addCategory, { isLoading }] = useAddCategoryMutation();
+
+    const validate = () => {
+        if (!name.trim()) return 'Name is required';
+        if (name.length < 3) return 'Minimum 3 characters';
+
+        if (imageUrl && !/^https?:\/\/.+\..+/.test(imageUrl)) {
+            return 'Invalid image URL';
+        }
+
+        return null;
+    };
+
+    const handleSubmit = async () => {
+        const errorMessage = validate();
+
+        if (errorMessage) {
+            setError(errorMessage);
+            return;
+        }
+
+        try {
+            await addCategory({ name, imageUrl }).unwrap();
+
+            setName('');
+            setImageUrl('');
+            setError('Category created!');
+        } catch (err) {
+            setError('Failed to create category');
+        }
+    };
+
+    return (
+        <ScrollView
+            contentContainerStyle={{
+                flexGrow: 1,
+                justifyContent: 'center',
+                padding: 20,
+                backgroundColor: '#0F0F0F',
+            }}
+        >
+            <ThemedView
+                style={{
+                    backgroundColor: '#1C1C1E',
+                    padding: 20,
+                    borderRadius: 20,
+                    borderWidth: 1,
+                    borderColor: '#2C2C2E',
+                }}
+            >
+                {/* TITLE */}
+                <ThemedText
+                    type="title"
+                    style={{
+                        marginBottom: 20,
+                        textAlign: 'center',
+                        color: '#FFD60A',
+                    }}
+                >
+                    Add Category
+                </ThemedText>
+
+                {/* ERROR / SUCCESS */}
+                {error ? (
+                    <ThemedText
+                        style={{
+                            color: error.includes('✅') ? '#4CAF50' : '#FF3B30',
+                            marginBottom: 12,
+                            textAlign: 'center',
+                        }}
+                    >
+                        {error}
+                    </ThemedText>
+                ) : null}
+
+                {/* NAME */}
+                <View style={{ marginBottom: 16 }}>
+                    <ThemedText style={{ marginBottom: 6, color: '#aaa' }}>
+                        Name
+                    </ThemedText>
+                    <TextInput
+                        placeholder="Enter category name"
+                        placeholderTextColor="#666"
+                        value={name}
+                        onChangeText={(text) => {
+                            setName(text);
+                            setError('');
+                        }}
+                        style={{
+                            backgroundColor: '#2C2C2E',
+                            padding: 14,
+                            borderRadius: 12,
+                            fontSize: 16,
+                            color: '#fff',
+                            borderWidth: 1,
+                            borderColor: '#3A3A3C',
+                        }}
+                    />
+                </View>
+
+                {/* IMAGE URL */}
+                <View style={{ marginBottom: 20 }}>
+                    <ThemedText style={{ marginBottom: 6, color: '#aaa' }}>
+                        Image URL
+                    </ThemedText>
+                    <TextInput
+                        placeholder="https://example.com/image.jpg"
+                        placeholderTextColor="#666"
+                        value={imageUrl}
+                        onChangeText={(text) => {
+                            setImageUrl(text);
+                            setError('');
+                        }}
+                        style={{
+                            backgroundColor: '#2C2C2E',
+                            padding: 14,
+                            borderRadius: 12,
+                            fontSize: 16,
+                            color: '#fff',
+                            borderWidth: 1,
+                            borderColor: '#3A3A3C',
+                        }}
+                    />
+                </View>
+
+                {/* BUTTON */}
+                <TouchableOpacity
+                    onPress={handleSubmit}
+                    activeOpacity={0.8}
+                    style={{
+                        backgroundColor: '#FFD60A',
+                        padding: 16,
+                        borderRadius: 14,
+                        alignItems: 'center',
+                    }}
+                    disabled={isLoading}
+                >
+                    {isLoading ? (
+                        <ActivityIndicator color="#000" />
+                    ) : (
+                        <ThemedText style={{ color: '#000', fontSize: 16 }}>
+                            Create Category
+                        </ThemedText>
+                    )}
+                </TouchableOpacity>
+            </ThemedView>
+        </ScrollView>
+    );
+}

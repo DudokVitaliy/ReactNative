@@ -6,7 +6,6 @@ import "../global.css";
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
-// 🔥 ДОДАЙ ЦЕ
 import { Provider } from 'react-redux';
 import { store } from '../store';
 

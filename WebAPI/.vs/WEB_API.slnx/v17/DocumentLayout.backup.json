@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\web_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\web_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WEB_API",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\WEB_API.csproj",
+              "RelativeDocumentMoniker": "WEB_API\\WEB_API.csproj",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\WEB_API.csproj",
+              "RelativeToolTip": "WEB_API\\WEB_API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-27T18:42:48.834Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

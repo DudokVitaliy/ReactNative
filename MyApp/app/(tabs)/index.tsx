@@ -37,7 +37,7 @@ export default function CategoryScreen() {
                         marginBottom: 24,
                         borderRadius: 16,
                         overflow: 'hidden',
-                        elevation: 3, // тінь для Android
+                        elevation: 3,
                         shadowColor: '#000',
                         shadowOffset: { width: 0, height: 2 },
                         shadowOpacity: 0.2,

@@ -6,11 +6,26 @@ export const categoryApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: 'http://192.168.0.4:5268/api/',
     }),
+    tagTypes: ['Category'],
+
     endpoints: (builder) => ({
         getCategories: builder.query<Category[], void>({
             query: () => 'category',
+            providesTags: ['Category'],
+        }),
+
+        addCategory: builder.mutation<Category, Partial<Category>>({
+            query: (body) => ({
+                url: 'category',
+                method: 'POST',
+                body,
+            }),
+            invalidatesTags: ['Category'],
         }),
     }),
 });
 
-export const { useGetCategoriesQuery } = categoryApi;
+export const {
+    useGetCategoriesQuery,
+    useAddCategoryMutation
+} = categoryApi;

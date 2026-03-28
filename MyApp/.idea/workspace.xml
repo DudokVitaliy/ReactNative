@@ -4,73 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="&lt;HelloWave /&gt;">
-      <change afterPath="$PROJECT_DIR$/services/categoryApi.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="QweryRTK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/explore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/explore.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/ref/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/ref/WEB_API.BLL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/refint/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/refint/WEB_API.BLL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/WEB_API.BLL.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/WEB_API.BLL.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/ref/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/ref/WEB_API.DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/refint/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/refint/WEB_API.DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/WEB_API.DAL.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/WEB_API.DAL.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ref/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ref/WEB_API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/refint/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/refint/WEB_API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rpswa.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/categoryApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/categoryApi.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,11 +95,25 @@
       <updated>1774175485531</updated>
       <workItem from="1774175488823" duration="7322000" />
       <workItem from="1774468084903" duration="2344000" />
-      <workItem from="1774636642271" duration="1806000" />
+      <workItem from="1774636642271" duration="4867000" />
     </task>
+    <task id="LOCAL-00001" summary="QweryRTK">
+      <option name="closed" value="true" />
+      <created>1774638583098</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774638583098</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="QweryRTK" />
+    <option name="LAST_COMMIT_MESSAGE" value="QweryRTK" />
   </component>
 </project>
