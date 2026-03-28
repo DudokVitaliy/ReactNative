@@ -1,38 +1,38 @@
 import React, { useState } from 'react';
-import {
-    ScrollView,
-    TextInput,
-    TouchableOpacity,
-    ActivityIndicator,
-    View,
-} from 'react-native';
+import { ScrollView } from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { useAddCategoryMutation } from '@/services/categoryApi';
+import { CustomInput } from '@/components/ui/CustomInput';
+import { CustomButton } from '@/components/ui/CustomButton';
 
-export default function TabTwoScreen() {
+interface Errors {
+    name?: string;
+    imageUrl?: string;
+    general?: string;
+}
+
+export default function ExploreScreen() {
     const [name, setName] = useState('');
     const [imageUrl, setImageUrl] = useState('');
-    const [error, setError] = useState('');
+    const [errors, setErrors] = useState<Errors>({});
 
     const [addCategory, { isLoading }] = useAddCategoryMutation();
 
-    const validate = () => {
-        if (!name.trim()) return 'Name is required';
-        if (name.length < 3) return 'Minimum 3 characters';
+    const validate = (): Errors => {
+        const newErrors: Errors = {};
+        if (!name.trim()) newErrors.name = 'Name is required';
+        else if (name.length < 3) newErrors.name = 'Minimum 3 characters';
 
-        if (imageUrl && !/^https?:\/\/.+\..+/.test(imageUrl)) {
-            return 'Invalid image URL';
-        }
+        if (imageUrl && !/^https?:\/\/.+\..+/.test(imageUrl)) newErrors.imageUrl = 'Invalid image URL';
 
-        return null;
+        return newErrors;
     };
 
     const handleSubmit = async () => {
-        const errorMessage = validate();
-
-        if (errorMessage) {
-            setError(errorMessage);
+        const validationErrors = validate();
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
             return;
         }
 
@@ -41,9 +41,9 @@ export default function TabTwoScreen() {
 
             setName('');
             setImageUrl('');
-            setError('Category created!');
+            setErrors({ general: 'Category created! ✅' });
         } catch (err) {
-            setError('Failed to create category');
+            setErrors({ general: 'Failed to create category' });
         }
     };
 
@@ -77,89 +77,60 @@ export default function TabTwoScreen() {
                     Add Category
                 </ThemedText>
 
-                {/* ERROR / SUCCESS */}
-                {error ? (
+                {/* SUCCESS MESSAGE ONLY */}
+                {errors.general && errors.general.includes('✅') && (
                     <ThemedText
                         style={{
-                            color: error.includes('✅') ? '#4CAF50' : '#FF3B30',
+                            color: '#4CAF50',
                             marginBottom: 12,
                             textAlign: 'center',
                         }}
                     >
-                        {error}
+                        {errors.general}
                     </ThemedText>
-                ) : null}
+                )}
 
                 {/* NAME */}
-                <View style={{ marginBottom: 16 }}>
-                    <ThemedText style={{ marginBottom: 6, color: '#aaa' }}>
-                        Name
-                    </ThemedText>
-                    <TextInput
-                        placeholder="Enter category name"
-                        placeholderTextColor="#666"
-                        value={name}
-                        onChangeText={(text) => {
-                            setName(text);
-                            setError('');
-                        }}
-                        style={{
-                            backgroundColor: '#2C2C2E',
-                            padding: 14,
-                            borderRadius: 12,
-                            fontSize: 16,
-                            color: '#fff',
-                            borderWidth: 1,
-                            borderColor: '#3A3A3C',
-                        }}
-                    />
-                </View>
+                <CustomInput
+                    value={name}
+                    onChangeText={(text) => {
+                        setName(text);
+                        setErrors((prev) => ({ ...prev, name: undefined, general: undefined }));
+                    }}
+                    placeholder="Enter category name"
+                    error={errors.name}
+                />
 
                 {/* IMAGE URL */}
-                <View style={{ marginBottom: 20 }}>
-                    <ThemedText style={{ marginBottom: 6, color: '#aaa' }}>
-                        Image URL
-                    </ThemedText>
-                    <TextInput
-                        placeholder="https://example.com/image.jpg"
-                        placeholderTextColor="#666"
-                        value={imageUrl}
-                        onChangeText={(text) => {
-                            setImageUrl(text);
-                            setError('');
-                        }}
-                        style={{
-                            backgroundColor: '#2C2C2E',
-                            padding: 14,
-                            borderRadius: 12,
-                            fontSize: 16,
-                            color: '#fff',
-                            borderWidth: 1,
-                            borderColor: '#3A3A3C',
-                        }}
-                    />
-                </View>
+                <CustomInput
+                    value={imageUrl}
+                    onChangeText={(text) => {
+                        setImageUrl(text);
+                        setErrors((prev) => ({ ...prev, imageUrl: undefined, general: undefined }));
+                    }}
+                    placeholder="https://example.com/image.jpg"
+                    error={errors.imageUrl}
+                />
 
                 {/* BUTTON */}
-                <TouchableOpacity
+                <CustomButton
+                    title="Create Category"
                     onPress={handleSubmit}
-                    activeOpacity={0.8}
-                    style={{
-                        backgroundColor: '#FFD60A',
-                        padding: 16,
-                        borderRadius: 14,
-                        alignItems: 'center',
-                    }}
-                    disabled={isLoading}
-                >
-                    {isLoading ? (
-                        <ActivityIndicator color="#000" />
-                    ) : (
-                        <ThemedText style={{ color: '#000', fontSize: 16 }}>
-                            Create Category
-                        </ThemedText>
-                    )}
-                </TouchableOpacity>
+                    loading={isLoading}
+                />
+
+                {/* GENERAL ERROR */}
+                {errors.general && !errors.general.includes('✅') && (
+                    <ThemedText
+                        style={{
+                            color: '#FF3B30',
+                            marginTop: 12,
+                            textAlign: 'center',
+                        }}
+                    >
+                        {errors.general}
+                    </ThemedText>
+                )}
             </ThemedView>
         </ScrollView>
     );

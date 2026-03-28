@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="QweryRTK">
+    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="CreateCategoryPage">
+      <change afterPath="$PROJECT_DIR$/components/ui/CustomButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/CustomInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/explore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/explore.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/categoryApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/categoryApi.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,9 @@
     &quot;accountId&quot;: &quot;29269c05-3314-451e-8b1b-ca1a6672e5bc&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -95,7 +97,8 @@
       <updated>1774175485531</updated>
       <workItem from="1774175488823" duration="7322000" />
       <workItem from="1774468084903" duration="2344000" />
-      <workItem from="1774636642271" duration="4867000" />
+      <workItem from="1774636642271" duration="5198000" />
+      <workItem from="1774702405147" duration="3134000" />
     </task>
     <task id="LOCAL-00001" summary="QweryRTK">
       <option name="closed" value="true" />
@@ -105,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774638583098</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="CreateCategoryPage">
+      <option name="closed" value="true" />
+      <created>1774701989020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774701989020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="QweryRTK" />
-    <option name="LAST_COMMIT_MESSAGE" value="QweryRTK" />
+    <MESSAGE value="CreateCategoryPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="CreateCategoryPage" />
   </component>
 </project>
