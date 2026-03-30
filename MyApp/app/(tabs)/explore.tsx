@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
-import { ScrollView } from 'react-native';
-import { ThemedText } from '@/components/themed-text';
+import { ScrollView, View, } from 'react-native';
 import { ThemedView } from '@/components/themed-view';
-import { useAddCategoryMutation } from '@/services/categoryApi';
+import { ThemedText } from '@/components/themed-text';
 import { CustomInput } from '@/components/ui/CustomInput';
 import { CustomButton } from '@/components/ui/CustomButton';
+import AvatarPicker from '@/components/ui/AvatarPicker';
+import { IImageFile } from '@/types/IImageFile';
+import { useAddCategoryMutation } from '@/services/categoryApi';
+import { serialize } from 'object-to-formdata';
 
 interface Errors {
     name?: string;
-    imageUrl?: string;
+    categoryImage?: string;
     general?: string;
 }
 
 export default function ExploreScreen() {
+    const [userAvatar, setUserAvatar] = useState<IImageFile | null>(null);
+    const [categoryImage, setCategoryImage] = useState<IImageFile | null>(null);
     const [name, setName] = useState('');
-    const [imageUrl, setImageUrl] = useState('');
     const [errors, setErrors] = useState<Errors>({});
 
     const [addCategory, { isLoading }] = useAddCategoryMutation();
@@ -22,10 +26,8 @@ export default function ExploreScreen() {
     const validate = (): Errors => {
         const newErrors: Errors = {};
         if (!name.trim()) newErrors.name = 'Name is required';
-        else if (name.length < 3) newErrors.name = 'Minimum 3 characters';
-
-        if (imageUrl && !/^https?:\/\/.+\..+/.test(imageUrl)) newErrors.imageUrl = 'Invalid image URL';
-
+        else if (name.trim().length < 3) newErrors.name = 'Minimum 3 characters';
+        if (!categoryImage) newErrors.categoryImage = 'Category image is required';
         return newErrors;
     };
 
@@ -37,60 +39,63 @@ export default function ExploreScreen() {
         }
 
         try {
-            await addCategory({ name, imageUrl }).unwrap();
+            const data = { name, categoryImage };
+            const formData = serialize(data);
+            await addCategory(formData as any).unwrap();
 
             setName('');
-            setImageUrl('');
+            setCategoryImage(null);
             setErrors({ general: 'Category created! ✅' });
-        } catch (err) {
+        } catch {
             setErrors({ general: 'Failed to create category' });
         }
     };
 
     return (
+
         <ScrollView
             contentContainerStyle={{
                 flexGrow: 1,
                 justifyContent: 'center',
                 padding: 20,
                 backgroundColor: '#0F0F0F',
-            }}
-        >
+            }}>
             <ThemedView
                 style={{
                     backgroundColor: '#1C1C1E',
                     padding: 20,
                     borderRadius: 20,
-                    borderWidth: 1,
-                    borderColor: '#2C2C2E',
+                    borderWidth: 2,
+                    borderColor: '#FFD60A',
+                    margin: 10
                 }}
             >
-                {/* TITLE */}
-                <ThemedText
-                    type="title"
-                    style={{
-                        marginBottom: 20,
-                        textAlign: 'center',
-                        color: '#FFD60A',
-                    }}
-                >
-                    Add Category
-                </ThemedText>
+            <ThemedText className="text-yellow-400 text-4xl font-bold text-center mb-8">
+                Select Avatar
+            </ThemedText>
+            <View>
+                <AvatarPicker image={userAvatar?.uri || null} onChange={setUserAvatar} />
+            </View>
+            </ThemedView>
+            <ThemedView
+                style={{
+                    backgroundColor: '#1C1C1E',
+                    padding: 20,
+                    borderRadius: 20,
+                    borderWidth: 2,
+                    borderColor: '#FFD60A',
+                    margin: 10
+                }}
+            >
+            <ThemedText className="text-yellow-400 text-4xl font-bold text-center mb-8">
+                Add Category
+            </ThemedText>
 
-                {/* SUCCESS MESSAGE ONLY */}
+            <View className="bg-[#1C1C1E] p-6 rounded-2xl border border-[#2C2C2E]">
                 {errors.general && errors.general.includes('✅') && (
-                    <ThemedText
-                        style={{
-                            color: '#4CAF50',
-                            marginBottom: 12,
-                            textAlign: 'center',
-                        }}
-                    >
-                        {errors.general}
-                    </ThemedText>
+                    <ThemedText className="text-green-500 mb-4 text-center">{errors.general}</ThemedText>
                 )}
 
-                {/* NAME */}
                 <CustomInput
                     value={name}
                     onChangeText={(text) => {
@@ -101,36 +106,36 @@ export default function ExploreScreen() {
                     error={errors.name}
                 />
 
-                {/* IMAGE URL */}
-                <CustomInput
-                    value={imageUrl}
-                    onChangeText={(text) => {
-                        setImageUrl(text);
-                        setErrors((prev) => ({ ...prev, imageUrl: undefined, general: undefined }));
-                    }}
-                    placeholder="https://example.com/image.jpg"
-                    error={errors.imageUrl}
-                />
+                <ThemedText className="text-white font-semibold mb-3 text-center">
+                    Select category Image
+                </ThemedText>
 
-                {/* BUTTON */}
+                <View className="items-center mb-4">
+                    <AvatarPicker
+                        image={categoryImage?.uri || null}
+                        onChange={(file) => {
+                            setCategoryImage(file);
+                            setErrors((prev) => ({ ...prev, categoryImage: undefined, general: undefined }));
+                        }}
+                    />
+                    {errors.categoryImage && (
+                        <ThemedText className="text-red-500 mt-2 text-center">{errors.categoryImage}</ThemedText>
+                    )}
+                </View>
+
+                {/* Create button */}
                 <CustomButton
                     title="Create Category"
                     onPress={handleSubmit}
                     loading={isLoading}
+                    style={{ marginTop: 20 }}
                 />
 
-                {/* GENERAL ERROR */}
+                {/* General error */}
                 {errors.general && !errors.general.includes('✅') && (
-                    <ThemedText
-                        style={{
-                            color: '#FF3B30',
-                            marginTop: 12,
-                            textAlign: 'center',
-                        }}
-                    >
-                        {errors.general}
-                    </ThemedText>
+                    <ThemedText className="text-red-500 mt-4 text-center">{errors.general}</ThemedText>
                 )}
+            </View>
             </ThemedView>
         </ScrollView>
     );

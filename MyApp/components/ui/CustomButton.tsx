@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, ActivityIndicator, StyleProp, ViewStyle } from 'react-native';
+import { TouchableOpacity, Text, ActivityIndicator, StyleProp, ViewStyle, TextStyle } from 'react-native';
 
 interface CustomButtonProps {
     title: string;
@@ -7,6 +7,7 @@ interface CustomButtonProps {
     loading?: boolean;
     disabled?: boolean;
     style?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
@@ -15,6 +16,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
                                                               loading = false,
                                                               disabled = false,
                                                               style,
+                                                              textStyle,
                                                           }) => {
     return (
         <TouchableOpacity
@@ -34,7 +36,9 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
             {loading ? (
                 <ActivityIndicator color="#000" />
             ) : (
-                <Text style={{ color: '#000', fontSize: 16 }}>{title}</Text>
+                <Text style={[{ color: '#000', fontSize: 16, fontWeight: '700' }, textStyle]}>
+                    {title}
+                </Text>
             )}
         </TouchableOpacity>
     );

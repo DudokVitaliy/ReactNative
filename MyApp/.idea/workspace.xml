@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="CreateCategoryPage">
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomInput.tsx" afterDir="false" />
+    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="CustomInputs">
+      <change afterPath="$PROJECT_DIR$/components/ui/AvatarPicker.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/IImageFile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/explore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/explore.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CustomButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CustomInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +102,8 @@
       <workItem from="1774175488823" duration="7322000" />
       <workItem from="1774468084903" duration="2344000" />
       <workItem from="1774636642271" duration="5198000" />
-      <workItem from="1774702405147" duration="3134000" />
+      <workItem from="1774702405147" duration="6280000" />
+      <workItem from="1774893678369" duration="3742000" />
     </task>
     <task id="LOCAL-00001" summary="QweryRTK">
       <option name="closed" value="true" />
@@ -116,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774701989020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="CustomInputs">
+      <option name="closed" value="true" />
+      <created>1774716358147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774716358147</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +139,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="QweryRTK" />
     <MESSAGE value="CreateCategoryPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="CreateCategoryPage" />
+    <MESSAGE value="CustomInputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="CustomInputs" />
   </component>
 </project>
