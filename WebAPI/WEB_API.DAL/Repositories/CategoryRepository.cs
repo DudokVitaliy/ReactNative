@@ -9,16 +9,19 @@ namespace WEB_API.DAL.Repositories
     {
         private readonly AppDbContext _context;
 
-        // Конструктор для DI
         public CategoryRepository(AppDbContext context)
         {
             _context = context;
         }
 
-        // Реалізація методу з інтерфейсу
         public async Task<List<CategoryEntity>> GetAllAsync()
         {
             return await _context.Categories.ToListAsync();
+        }
+        public async Task CreateAsync(CategoryEntity category)
+        {
+            _context.Categories.Add(category);
+            await _context.SaveChangesAsync();
         }
     }
 }

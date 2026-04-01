@@ -87,3 +87,4 @@ C:\Users\TechnoRoom\Desktop\ReactNative\WebAPI\WEB_API\obj\Debug\net10.0\refint\
 C:\Users\TechnoRoom\Desktop\ReactNative\WebAPI\WEB_API\obj\Debug\net10.0\WEB_API.pdb
 C:\Users\TechnoRoom\Desktop\ReactNative\WebAPI\WEB_API\obj\Debug\net10.0\WEB_API.genruntimeconfig.cache
 C:\Users\TechnoRoom\Desktop\ReactNative\WebAPI\WEB_API\obj\Debug\net10.0\ref\WEB_API.dll
+C:\Users\TechnoRoom\Desktop\ReactNative\WebAPI\WEB_API\bin\Debug\net10.0\WEB_API.staticwebassets.runtime.json

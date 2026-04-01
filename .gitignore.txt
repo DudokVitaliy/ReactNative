@@ -1,0 +1,56 @@
+# Node.js / React Native
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Expo
+.expo/
+.expo-shared/
+web-build/
+
+# React Native
+ios/Pods/
+ios/build/
+android/.gradle/
+android/app/build/
+*.keystore
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# .NET build
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+*.log
+*.vsix
+*.dbmdl
+*.bak
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.iml
+
+# Expo / Metro
+.expo/
+.expo-shared/
+metro-cache/

@@ -17,4 +17,8 @@
     <ProjectReference Include="..\WEB_API.BLL\WEB_API.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>
