@@ -7,7 +7,7 @@ import { CustomButton } from '@/components/ui/CustomButton';
 import AvatarPicker from '@/components/ui/AvatarPicker';
 import { IImageFile } from '@/types/IImageFile';
 import { useAddCategoryMutation } from '@/services/categoryApi';
-import { serialize } from 'object-to-formdata';
+
 
 interface Errors {
     name?: string;
@@ -39,8 +39,18 @@ export default function ExploreScreen() {
         }
 
         try {
-            const data = { name, categoryImage };
-            const formData = serialize(data);
+            const formData = new FormData();
+
+            formData.append("name", name);
+
+            if (categoryImage) {
+                formData.append("categoryImage", {
+                    uri: categoryImage.uri,
+                    type: categoryImage.type,
+                    name: categoryImage.name || "image.jpg",
+                } as any);
+            }
+
             await addCategory(formData as any).unwrap();
 
             setName('');

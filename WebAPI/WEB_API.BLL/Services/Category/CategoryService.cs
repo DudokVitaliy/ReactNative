@@ -1,5 +1,7 @@
-﻿using WEB_API.DAL.Repositories;
+﻿using System.Threading.Tasks;
+using WEB_API.BLL.Dtos.Category;
 using WEB_API.DAL.Entities;
+using WEB_API.DAL.Repositories; 
 
 namespace WEB_API.BLL.Services.Category
 {
@@ -15,6 +17,18 @@ namespace WEB_API.BLL.Services.Category
         public async Task<List<CategoryEntity>> GetAllCategoriesAsync()
         {
             return await _categoryRepository.GetAllAsync();
+        }
+        public async Task<CategoryEntity> CreateAsync(CreateCategoryDto dto)
+        {
+            var category = new CategoryEntity
+            {
+                Name = dto.Name,
+                Image = dto.ImagePath
+            };
+
+            await _categoryRepository.CreateAsync(category);
+
+            return category;
         }
     }
 }
