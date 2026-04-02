@@ -127,16 +127,12 @@ export default function CategoryScreen() {
                                     if (selectedId === null) return;
 
                                     try {
-                                        // локальний стан для спінера
                                         setLocalLoading(true);
 
-                                        // виконуємо DELETE
                                         await deleteCategory(selectedId).unwrap();
 
-                                        // чекаємо мінімум 1 секунду
                                         await new Promise((resolve) => setTimeout(resolve, 1000));
 
-                                        // після завершення ховаємо модалку і спінер
                                         setModalVisible(false);
                                         setLocalLoading(false);
                                     } catch (err) {
@@ -144,7 +140,7 @@ export default function CategoryScreen() {
                                         setLocalLoading(false);
                                     }
                                 }}
-                                loading={localLoading} // тут вже свій локальний спінер
+                                loading={localLoading}
                                 style={{ flex: 1, marginLeft: 8, backgroundColor: 'red' }}
                                 textStyle={{ color: '#fff' }}
                             />
