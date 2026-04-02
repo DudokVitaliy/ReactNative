@@ -64,5 +64,16 @@ namespace WEB_API.Controllers
 
             return Ok(result);
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var category = await _categoryService.GetByIdAsync(id);
+            if (category == null)
+                return NotFound();
+
+            await _categoryService.DeleteAsync(id);
+
+            return Ok(new { success = true, id });
+        }
     }
 }

@@ -29,5 +29,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WEB_API.Controllers.CategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

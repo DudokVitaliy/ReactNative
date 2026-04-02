@@ -22,10 +22,19 @@ export const categoryApi = createApi({
             }),
             invalidatesTags: ['Category'],
         }),
+
+        deleteCategory: builder.mutation<{ success: boolean; id: number }, number>({
+            query: (id) => ({
+                url: `category/${id}`,
+                method: 'DELETE',
+            }),
+            invalidatesTags: ['Category'],
+        }),
     }),
 });
 
 export const {
     useGetCategoriesQuery,
-    useAddCategoryMutation
+    useAddCategoryMutation,
+    useDeleteCategoryMutation,
 } = categoryApi;

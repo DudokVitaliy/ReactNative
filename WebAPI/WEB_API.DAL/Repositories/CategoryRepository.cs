@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using WEB_API.DAL.Entities;
 
 namespace WEB_API.DAL.Repositories
@@ -18,9 +16,21 @@ namespace WEB_API.DAL.Repositories
         {
             return await _context.Categories.ToListAsync();
         }
+
+        public async Task<CategoryEntity> GetByIdAsync(int id)
+        {
+            return await _context.Categories.FindAsync(id);
+        }
+
         public async Task CreateAsync(CategoryEntity category)
         {
             _context.Categories.Add(category);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(CategoryEntity category)
+        {
+            _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
         }
     }

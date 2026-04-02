@@ -7,5 +7,7 @@ namespace WEB_API.BLL.Services.Category
     {
         Task<List<CategoryEntity>> GetAllCategoriesAsync();
         Task<CategoryEntity> CreateAsync(CreateCategoryDto dto);
+        Task<CategoryEntity> GetByIdAsync(int id);
+        Task DeleteAsync(int id);
     }
 }

@@ -1,12 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using WEB_API.DAL.Entities;
+﻿using WEB_API.DAL.Entities;
 
-namespace WEB_API.DAL.Repositories
+public interface ICategoryRepository
 {
-    public interface ICategoryRepository
-    {
-        Task<List<CategoryEntity>> GetAllAsync();
-        Task CreateAsync(CategoryEntity category);
-    }
+    Task<List<CategoryEntity>> GetAllAsync();
+    Task<CategoryEntity> GetByIdAsync(int id);
+    Task CreateAsync(CategoryEntity category);
+    Task DeleteAsync(CategoryEntity category);
 }
