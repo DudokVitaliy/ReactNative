@@ -14,12 +14,29 @@ export const categoryApi = createApi({
             providesTags: ['Category'],
         }),
 
+        getCategoryById: builder.query<Category, number>({
+            query: (id) => `category/${id}`,
+            providesTags: ['Category'],
+        }),
+
         addCategory: builder.mutation<Category, Partial<Category>>({
             query: (body) => ({
                 url: 'category',
                 method: 'POST',
                 body,
             }),
+            invalidatesTags: ['Category'],
+        }),
+
+        updateCategory: builder.mutation<any, FormData>({
+            query: (formData) => {
+                const id = formData.get('id');
+                return {
+                    url: `category/${id}`,
+                    method: 'PUT',
+                    body: formData,
+                };
+            },
             invalidatesTags: ['Category'],
         }),
 
@@ -35,6 +52,8 @@ export const categoryApi = createApi({
 
 export const {
     useGetCategoriesQuery,
+    useGetCategoryByIdQuery,
     useAddCategoryMutation,
+    useUpdateCategoryMutation,
     useDeleteCategoryMutation,
 } = categoryApi;

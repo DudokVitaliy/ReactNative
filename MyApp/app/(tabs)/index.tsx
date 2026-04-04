@@ -1,14 +1,26 @@
 import React from 'react';
-import { ScrollView, ImageBackground, ActivityIndicator, View, Text, Modal } from 'react-native';
+import {
+    ScrollView,
+    ImageBackground,
+    ActivityIndicator,
+    View,
+    Text,
+    Modal,
+} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { useGetCategoriesQuery, useDeleteCategoryMutation } from '@/services/categoryApi';
+import {
+    useGetCategoriesQuery,
+    useDeleteCategoryMutation,
+} from '@/services/categoryApi';
 import { CustomButton } from '@/components/ui/CustomButton';
+import { router } from 'expo-router';
 
 export default function CategoryScreen() {
+
     const { data: categories, isLoading, error } = useGetCategoriesQuery();
-    const [deleteCategory, { isLoading: isDeleting }] = useDeleteCategoryMutation();
+    const [deleteCategory] = useDeleteCategoryMutation();
 
     const [modalVisible, setModalVisible] = React.useState(false);
     const [selectedId, setSelectedId] = React.useState<number | null>(null);
@@ -37,7 +49,7 @@ export default function CategoryScreen() {
                     Categories
                 </ThemedText>
 
-                {categories?.map(category => (
+                {categories?.map((category) => (
                     <ThemedView
                         key={category.id}
                         style={{
@@ -61,16 +73,33 @@ export default function CategoryScreen() {
                                     colors={['transparent', 'rgba(0,0,0,0.6)']}
                                     style={{ padding: 12 }}
                                 >
-                                    <ThemedText type="subtitle" style={{ color: '#fff', fontSize: 18 }}>
+                                    <ThemedText
+                                        type="subtitle"
+                                        style={{ color: '#fff', fontSize: 18 }}
+                                    >
                                         {category.name}
                                     </ThemedText>
                                 </LinearGradient>
                             </ImageBackground>
                         ) : (
                             <View style={{ padding: 12, backgroundColor: '#f0f0f0' }}>
-                                <ThemedText type="subtitle">{category.name}</ThemedText>
+                                <ThemedText type="subtitle">
+                                    {category.name}
+                                </ThemedText>
                             </View>
                         )}
+
+                        <CustomButton
+                            title="Edit"
+                            onPress={() => router.push(`/edit-category/${category.id}`)}
+                            style={{
+                                position: 'absolute',
+                                top: 10,
+                                left: 10,
+                                backgroundColor: '#007bff',
+                            }}
+                            textStyle={{ color: '#fff' }}
+                        />
 
                         <CustomButton
                             title="Delete"
@@ -93,31 +122,43 @@ export default function CategoryScreen() {
                 ))}
             </ScrollView>
 
-            <Modal
-                transparent={true}
-                visible={modalVisible}
-                animationType="fade"
-            >
-                <View style={{
-                    flex: 1,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(0,0,0,0.5)'
-                }}>
-                    <View style={{
-                        width: 300,
-                        backgroundColor: '#fff',
-                        borderRadius: 12,
-                        padding: 20,
-                        alignItems: 'center'
-                    }}>
-                        <Text style={{ fontSize: 18, marginBottom: 16 }}>Ви впевнені?</Text>
+            <Modal transparent={true} visible={modalVisible} animationType="fade">
+                <View
+                    style={{
+                        flex: 1,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                    }}
+                >
+                    <View
+                        style={{
+                            width: 300,
+                            backgroundColor: '#fff',
+                            borderRadius: 12,
+                            padding: 20,
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Text style={{ fontSize: 18, marginBottom: 16 }}>
+                            Ви впевнені?
+                        </Text>
 
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                        <View
+                            style={{
+                                flexDirection: 'row',
+                                justifyContent: 'space-between',
+                                width: '100%',
+                            }}
+                        >
                             <CustomButton
                                 title="Ні"
                                 onPress={() => setModalVisible(false)}
-                                style={{ flex: 1, marginRight: 8, backgroundColor: '#ccc' }}
+                                style={{
+                                    flex: 1,
+                                    marginRight: 8,
+                                    backgroundColor: '#ccc',
+                                }}
                                 textStyle={{ color: '#000' }}
                             />
 
@@ -131,8 +172,6 @@ export default function CategoryScreen() {
 
                                         await deleteCategory(selectedId).unwrap();
 
-                                        await new Promise((resolve) => setTimeout(resolve, 1000));
-
                                         setModalVisible(false);
                                         setLocalLoading(false);
                                     } catch (err) {
@@ -141,7 +180,11 @@ export default function CategoryScreen() {
                                     }
                                 }}
                                 loading={localLoading}
-                                style={{ flex: 1, marginLeft: 8, backgroundColor: 'red' }}
+                                style={{
+                                    flex: 1,
+                                    marginLeft: 8,
+                                    backgroundColor: 'red',
+                                }}
                                 textStyle={{ color: '#fff' }}
                             />
                         </View>

@@ -19,7 +19,7 @@ namespace WEB_API.DAL.Repositories
 
         public async Task<CategoryEntity> GetByIdAsync(int id)
         {
-            return await _context.Categories.FindAsync(id);
+            return await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task CreateAsync(CategoryEntity category)
@@ -31,6 +31,20 @@ namespace WEB_API.DAL.Repositories
         public async Task DeleteAsync(CategoryEntity category)
         {
             _context.Categories.Remove(category);
+            await _context.SaveChangesAsync();
+        }
+        public async Task UpdateAsync(CategoryEntity category)
+        {
+            var existing = await _context.Categories.FindAsync(category.Id);
+            if (existing == null) throw new KeyNotFoundException("Категорія не знайдена");
+
+            existing.Name = category.Name;
+
+            if (!string.IsNullOrEmpty(category.Image))
+            {
+                existing.Image = category.Image;
+            }
+
             await _context.SaveChangesAsync();
         }
     }

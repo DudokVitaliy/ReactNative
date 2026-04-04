@@ -30,11 +30,7 @@ namespace WEB_API.BLL.Services.Category
             return category;
         }
 
-        public async Task<CategoryEntity> GetByIdAsync(int id)
-        {
-            return await _categoryRepository.GetByIdAsync(id);
-        }
-
+        
         public async Task DeleteAsync(int id)
         {
             var category = await _categoryRepository.GetByIdAsync(id);
@@ -42,5 +38,26 @@ namespace WEB_API.BLL.Services.Category
 
             await _categoryRepository.DeleteAsync(category);
         }
+        public async Task<CategoryEntity> GetByIdAsync(int id)
+        {
+            return await _categoryRepository.GetByIdAsync(id);
+        }
+        public async Task<CategoryEntity> UpdateAsync(UpdateCategoryDto dto)
+        {
+            var existing = await _categoryRepository.GetByIdAsync(dto.Id);
+            if (existing == null) throw new KeyNotFoundException("Категорія не знайдена");
+
+            existing.Name = dto.Name;
+
+            if (!string.IsNullOrEmpty(dto.ImagePath))
+            {
+                existing.Image = dto.ImagePath;
+            }
+
+            await _categoryRepository.UpdateAsync(existing);
+
+            return existing;
+        }
+
     }
 }

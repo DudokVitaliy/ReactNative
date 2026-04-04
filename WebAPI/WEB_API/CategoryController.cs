@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WEB_API.BLL.Dtos.Category;
+using WEB_API.BLL.Models;
 using WEB_API.BLL.Services.Category;
 using WEB_API.Models;
-using WEB_API.BLL.Dtos.Category;
 
 namespace WEB_API.Controllers
 {
@@ -34,7 +35,21 @@ namespace WEB_API.Controllers
 
             return Ok(result);
         }
-
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCategoryById(int id)
+        {
+            var category = await _categoryService.GetByIdAsync(id);
+            if (category == null)
+                return NotFound();
+            var host = $"{Request.Scheme}://{Request.Host}";
+            var result = new CategoryResponseDto
+            {
+                Id = category.Id,
+                Name = category.Name,
+                ImageUrl = string.IsNullOrEmpty(category.Image) ? null : $"{host}/uploads/{category.Image}"
+            };
+            return Ok(result);
+        }
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CreateCategoryRequest request)
         {
@@ -74,6 +89,47 @@ namespace WEB_API.Controllers
             await _categoryService.DeleteAsync(id);
 
             return Ok(new { success = true, id });
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromForm] UpdateCategoryRequest request)
+        {
+            var existing = await _categoryService.GetByIdAsync(id);
+            if (existing == null)
+                return NotFound();
+
+            string? fileName = null;
+
+            if (request.CategoryImage != null)
+            {
+                var folder = Path.Combine(_env.WebRootPath, "uploads");
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+
+                fileName = Guid.NewGuid() + Path.GetExtension(request.CategoryImage.FileName);
+                var path = Path.Combine(folder, fileName);
+
+                using var stream = new FileStream(path, FileMode.Create);
+                await request.CategoryImage.CopyToAsync(stream);
+            }
+
+            var updateDto = new UpdateCategoryDto
+            {
+                Id = id,
+                Name = request.Name,
+                ImagePath = fileName
+            };
+
+            var updated = await _categoryService.UpdateAsync(updateDto);
+
+            var host = $"{Request.Scheme}://{Request.Host}";
+            var result = new CategoryResponseDto
+            {
+                Id = updated.Id,
+                Name = updated.Name,
+                ImageUrl = string.IsNullOrEmpty(updated.Image) ? null : $"{host}/uploads/{updated.Image}"
+            };
+
+            return Ok(result);
         }
     }
 }
