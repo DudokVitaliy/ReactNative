@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.bll\\models\\updatecategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\models\\updatecategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6DD963F-E98E-C7B0-2164-31DA9ED53B3D}|WEB_API.DAL\\WEB_API.DAL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.dal\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6DD963F-E98E-C7B0-2164-31DA9ED53B3D}|WEB_API.DAL\\WEB_API.DAL.csproj|solutionrelative:web_api.dal\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.bll\\models\\createcategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\models\\createcategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\helpers\\jsondata\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\helpers\\jsondata\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\web_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\web_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.bll\\dtos\\category\\updatecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\dtos\\category\\updatecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.bll\\services\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.bll\\services\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.bll\\services\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6DD963F-E98E-C7B0-2164-31DA9ED53B3D}|WEB_API.DAL\\WEB_API.DAL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.dal\\repositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6DD963F-E98E-C7B0-2164-31DA9ED53B3D}|WEB_API.DAL\\WEB_API.DAL.csproj|solutionrelative:web_api.dal\\repositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.bll\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6F7C783-D33E-E460-F131-A6FCC95CD4C1}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6DD963F-E98E-C7B0-2164-31DA9ED53B3D}|WEB_API.DAL\\WEB_API.DAL.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api.dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6DD963F-E98E-C7B0-2164-31DA9ED53B3D}|WEB_API.DAL\\WEB_API.DAL.csproj|solutionrelative:web_api.dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,37 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Users.json",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\Helpers\\JsonData\\Users.json",
+              "RelativeDocumentMoniker": "WEB_API\\Helpers\\JsonData\\Users.json",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\Helpers\\JsonData\\Users.json",
+              "RelativeToolTip": "WEB_API\\Helpers\\JsonData\\Users.json",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-06T18:14:56.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateCategoryRequest.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Models\\UpdateCategoryRequest.cs",
-              "RelativeDocumentMoniker": "WEB_API.BLL\\Models\\UpdateCategoryRequest.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Models\\UpdateCategoryRequest.cs",
-              "RelativeToolTip": "WEB_API.BLL\\Models\\UpdateCategoryRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T18:22:32.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateCategoryRequest.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Models\\CreateCategoryRequest.cs",
-              "RelativeDocumentMoniker": "WEB_API.BLL\\Models\\CreateCategoryRequest.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Models\\CreateCategoryRequest.cs",
-              "RelativeToolTip": "WEB_API.BLL\\Models\\CreateCategoryRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T18:22:13.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "WEB_API",
               "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\WEB_API.csproj",
               "RelativeDocumentMoniker": "WEB_API\\WEB_API.csproj",
@@ -84,7 +67,46 @@
               "RelativeToolTip": "WEB_API\\WEB_API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-04T18:21:55.537Z",
+              "WhenOpened": "2026-04-06T18:14:11.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StorageService.cs",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "RelativeToolTip": "WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T18:35:32.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\appsettings.json",
+              "RelativeDocumentMoniker": "WEB_API\\appsettings.json",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\appsettings.json",
+              "RelativeToolTip": "WEB_API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-05T12:59:08.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WEB_API.DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\AppDbContext.cs",
+              "RelativeToolTip": "WEB_API.DAL\\AppDbContext.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T12:43:34.261Z",
               "EditorCaption": ""
             },
             {
@@ -93,80 +115,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateCategoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Dtos\\Category\\UpdateCategoryDto.cs",
-              "RelativeDocumentMoniker": "WEB_API.BLL\\Dtos\\Category\\UpdateCategoryDto.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Dtos\\Category\\UpdateCategoryDto.cs",
-              "RelativeToolTip": "WEB_API.BLL\\Dtos\\Category\\UpdateCategoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T18:16:44.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\Repositories\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "WEB_API.DAL\\Repositories\\CategoryRepository.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\Repositories\\CategoryRepository.cs",
-              "RelativeToolTip": "WEB_API.DAL\\Repositories\\CategoryRepository.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAiwC0AAAANAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\Program.cs",
+              "RelativeDocumentMoniker": "WEB_API\\Program.cs",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\Program.cs",
+              "RelativeToolTip": "WEB_API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T18:10:38.119Z",
+              "WhenOpened": "2026-04-05T12:03:46.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\CategoryController.cs",
-              "RelativeDocumentMoniker": "WEB_API\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\CategoryController.cs",
-              "RelativeToolTip": "WEB_API\\CategoryController.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAmwIYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\DbSeeder.cs",
+              "RelativeToolTip": "WEB_API.BLL\\Services\\DbSeeder.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T18:06:39.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ICategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\Repositories\\ICategoryRepository.cs",
-              "RelativeDocumentMoniker": "WEB_API.DAL\\Repositories\\ICategoryRepository.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.DAL\\Repositories\\ICategoryRepository.cs",
-              "RelativeToolTip": "WEB_API.DAL\\Repositories\\ICategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T18:11:03.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\Category\\CategoryService.cs",
-              "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\Category\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\Category\\CategoryService.cs",
-              "RelativeToolTip": "WEB_API.BLL\\Services\\Category\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T18:08:03.937Z",
+              "WhenOpened": "2026-04-05T11:58:14.944Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ICategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "RelativeToolTip": "WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\AuthController.cs",
+              "RelativeDocumentMoniker": "WEB_API\\AuthController.cs",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\AuthController.cs",
+              "RelativeToolTip": "WEB_API\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T18:07:20.219Z",
+              "WhenOpened": "2026-04-05T11:37:14.599Z",
               "EditorCaption": ""
             }
           ]

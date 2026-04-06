@@ -1,56 +1,149 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Events;
+using System.Text;
+using WEB_API.BLL.Services;
+using WEB_API.BLL.Services.Auth;
 using WEB_API.BLL.Services.Category;
+using WEB_API.BLL.Services.Storage;
 using WEB_API.DAL;
-using WEB_API.DAL.Entities;
+using WEB_API.DAL.Entities.Identity;
 using WEB_API.DAL.Repositories;
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .CreateBootstrapLogger();
 
-builder.WebHost.UseUrls("http://192.168.0.4:5268");
-
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseInMemoryDatabase("CategoriesDB"));
-
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-
-builder.Services.AddCors(options =>
+try
 {
-    options.AddPolicy("AllowAll",
-        builder => builder
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
-});
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+    var builder = WebApplication.CreateBuilder(args);
 
+    builder.Host.UseSerilog((context, services, configuration) => configuration
+        .ReadFrom.Configuration(context.Configuration)
+        .ReadFrom.Services(services)
+    );
 
-var app = builder.Build();
-
-app.UseStaticFiles();
-app.UseCors("AllowAll");
-
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-
-    if (!db.Categories.Any())
+    builder.Services.AddCors(options =>
     {
-        db.Categories.AddRange(
-            new CategoryEntity { Id = 1, Name = "Fantazy", Image = "https://cdn-ksvod.kyivstar.ua/content/HLS/VOD/IMAGE2/61c2efc3af14596160d8d034/IMAGE_2_3_XL.jpg" },
-            new CategoryEntity { Id = 2, Name = "Adventure", Image = "https://www.romb-studio.com.ua/wp-content/uploads/2025/12/filmy-pro-podorozhi-v-chasi-z-vysokym-rejtynhom-top-21-filmiv.jpg" }
-        );
-        db.SaveChanges();
-    }
+        options.AddPolicy("AllowAnyOriginPolicy",
+            policy =>
+            {
+                policy.AllowAnyOrigin()
+                      .AllowAnyHeader()
+                      .AllowAnyMethod();
+            });
+    });
+
+    // Add services to the container.
+
+    builder.Services.AddControllers();
+    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
+    builder.Services.AddDbContext<AppDbContext>(opt =>
+        opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+    builder.Services
+        .AddIdentity<UserEntity, RoleEntity>(options =>
+        {
+            options.Password.RequiredLength = 6;
+            options.Password.RequireDigit = false;
+            options.Password.RequireLowercase = false;
+            options.Password.RequireUppercase = false;
+            options.Password.RequireNonAlphanumeric = false;
+        })
+        .AddEntityFrameworkStores<AppDbContext>()
+        .AddDefaultTokenProviders();
+
+
+
+    builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+    builder.Services.AddScoped<ICategoryService, CategoryService>();
+    builder.Services.AddScoped<IStorageService, StorageService>();
+    builder.Services.AddScoped<IJWTTokenService, JWTTokenService>();
+    builder.Services.AddScoped<IIdentityService, IdentityService>();
+    builder.Services.AddScoped<IAuthService, AuthService>();
+    //builder.Services.AddTransient<IJWTTokenService, JWTTokenService>();
+
+    builder.Services.AddAutoMapper(cfg =>
+    {
+        cfg.LicenseKey = builder.Configuration.GetConnectionString("AutoMapperKey");
+
+    }, AppDomain.CurrentDomain.GetAssemblies());
+
+
+    builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateIssuerSigningKey = true,
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero,
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!))
+        };
+
+    });
+
+
+    var app = builder.Build();
+
+    app.UseSerilogRequestLogging();
+
+    app.UseCors("AllowAnyOriginPolicy");
+
+    // Configure the HTTP request pipeline.
+    //if (app.Environment.IsDevelopment())
+    //{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    //}
+
+    var path = Path.Combine(builder.Environment.ContentRootPath, "Images");
+    Directory.CreateDirectory(path);
+
+    StorageOptions.ImagesPath = path;
+
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(path),
+        RequestPath = "/images"
+    });
+
+
+    //app.UseHttpsRedirection();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    await app.SeedDataAsync();
+
+    app.Run();
 }
-
-app.UseSwagger();
-app.UseSwaggerUI();
-
-app.UseAuthorization();
-app.MapControllers();
-
-app.Run();
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application falied to start");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|c:\\users\\technoroom\\desktop\\reactnative\\webapi\\web_api\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0265BF54-A83F-D408-908B-E99BF2F519F8}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\CategoryController.cs",
-              "RelativeDocumentMoniker": "WEB_API\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\CategoryController.cs",
-              "RelativeToolTip": "WEB_API\\CategoryController.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAmwIUAAAAFAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\AuthController.cs",
+              "RelativeDocumentMoniker": "WEB_API\\AuthController.cs",
+              "ToolTip": "C:\\Users\\TechnoRoom\\Desktop\\ReactNative\\WebAPI\\WEB_API\\AuthController.cs",
+              "RelativeToolTip": "WEB_API\\AuthController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwD4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T18:06:39.241Z",
+              "WhenOpened": "2026-04-05T11:37:14.599Z",
               "EditorCaption": ""
             }
           ]
