@@ -4,7 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="" />
+    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/FileContentIndex/bbac3f53-5a54-4ae6-b080-bb483798db23.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/CodeChunks.db" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/CodeChunks.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/SemanticSymbols.db" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/SemanticSymbols.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/ref/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/ref/WEB_API.BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/refint/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/refint/WEB_API.BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ref/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ref/WEB_API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/refint/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/refint/WEB_API.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +145,7 @@
       <workItem from="1776192641065" duration="4273000" />
       <workItem from="1776196963035" duration="5246000" />
       <workItem from="1776686776487" duration="29000" />
+      <workItem from="1776689069465" duration="576000" />
     </task>
     <task id="LOCAL-00001" summary="QweryRTK">
       <option name="closed" value="true" />
