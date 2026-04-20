@@ -1,196 +1,157 @@
-import React from 'react';
+import {Image} from 'expo-image';
 import {
-    ScrollView,
-    ImageBackground,
-    ActivityIndicator,
-    View,
+    Alert,
+    Button,
+    StyleSheet,
     Text,
-    Modal,
+    TouchableOpacity,
+    View
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import {useEffect, useState} from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import {router} from 'expo-router';
+
+import ParallaxScrollView from '@/components/parallax-scroll-view';
+import {ThemedView} from '@/components/themed-view';
+import {ICategoryResponse} from "@/types/ICategoryResponse";
 import {
-    useGetCategoriesQuery,
     useDeleteCategoryMutation,
-} from '@/services/categoryApi';
-import { CustomButton } from '@/components/ui/CustomButton';
-import { router } from 'expo-router';
+    useGetCategoriesQuery
+} from "@/services/categoryApi";
+import {IMAGES_URL} from "@/constants/urls";
 
-export default function CategoryScreen() {
-
-    const { data: categories, isLoading, error } = useGetCategoriesQuery();
+export default function HomeScreen() {
+    const {data, isLoading} = useGetCategoriesQuery();
     const [deleteCategory] = useDeleteCategoryMutation();
 
-    const [modalVisible, setModalVisible] = React.useState(false);
-    const [selectedId, setSelectedId] = React.useState<number | null>(null);
-    const [localLoading, setLocalLoading] = React.useState(false);
+    const [isAuth, setIsAuth] = useState(false);
 
-    if (isLoading) {
-        return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <ActivityIndicator size="large" />
-            </View>
-        );
-    }
+    useEffect(() => {
+        const checkAuth = async () => {
+            const token = await AsyncStorage.getItem("token");
+            setIsAuth(!!token);
+        };
 
-    if (error) {
-        return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <ThemedText>Error loading categories</ThemedText>
-            </View>
-        );
-    }
+        checkAuth();
+    }, []);
+
+    const deleteHandler = async (id: string) => {
+        try {
+            //await deleteCategory(id).unwrap();
+        } catch (e) {
+            console.log("error", e);
+        }
+    };
+
+    const logout = async () => {
+        await AsyncStorage.removeItem("token");
+        setIsAuth(false);
+    };
 
     return (
-        <>
-            <ScrollView contentContainerStyle={{ padding: 16, paddingTop: 40 }}>
-                <ThemedText type="title" style={{ marginBottom: 16 }}>
-                    Categories
-                </ThemedText>
+        <ParallaxScrollView
+            headerBackgroundColor={{light: '#A1CEDC', dark: '#1D3D47'}}
+            headerImage={
+                <Image
+                    source={require('@/assets/images/partial-react-logo.png')}
+                    style={styles.reactLogo}
+                />
+            }
+        >
 
-                {categories?.map((category) => (
-                    <ThemedView
-                        key={category.id}
-                        style={{
-                            marginBottom: 24,
-                            borderRadius: 16,
-                            overflow: 'hidden',
-                            elevation: 3,
-                            shadowColor: '#000',
-                            shadowOffset: { width: 0, height: 2 },
-                            shadowOpacity: 0.2,
-                            shadowRadius: 4,
-                            position: 'relative',
-                        }}
-                    >
-                        {category.imageUrl ? (
-                            <ImageBackground
-                                source={{ uri: category.imageUrl }}
-                                style={{ width: '100%', height: 180, justifyContent: 'flex-end' }}
-                            >
-                                <LinearGradient
-                                    colors={['transparent', 'rgba(0,0,0,0.6)']}
-                                    style={{ padding: 12 }}
-                                >
-                                    <ThemedText
-                                        type="subtitle"
-                                        style={{ color: '#fff', fontSize: 18 }}
-                                    >
-                                        {category.name}
-                                    </ThemedText>
-                                </LinearGradient>
-                            </ImageBackground>
-                        ) : (
-                            <View style={{ padding: 12, backgroundColor: '#f0f0f0' }}>
-                                <ThemedText type="subtitle">
-                                    {category.name}
-                                </ThemedText>
-                            </View>
-                        )}
+            {/* NAVIGATION */}
+            <View style={{gap: 10, marginBottom: 10}}>
+                <Button
+                    onPress={() => router.push("/auth/login")}
+                    title="Login"
+                />
 
-                        <CustomButton
-                            title="Edit"
-                            onPress={() => router.push(`/edit-category/${category.id}`)}
-                            style={{
-                                position: 'absolute',
-                                top: 10,
-                                left: 10,
-                                backgroundColor: '#007bff',
-                            }}
-                            textStyle={{ color: '#fff' }}
+                <Button
+                    onPress={() => router.push("/auth/register")}
+                    title="Register"
+                />
+
+                {isAuth && (
+                    <>
+                        <Button
+                            onPress={() => router.push("/profile")}
+                            title="Profile"
                         />
 
-                        <CustomButton
-                            title="Delete"
-                            onPress={() => {
-                                setSelectedId(category.id);
-                                setModalVisible(true);
-                            }}
-                            style={{
-                                position: 'absolute',
-                                top: 10,
-                                right: 10,
-                                paddingVertical: 6,
-                                paddingHorizontal: 12,
-                                borderRadius: 8,
-                                backgroundColor: 'red',
-                            }}
-                            textStyle={{ color: '#fff', fontWeight: 'bold' }}
+                        <Button
+                            onPress={logout}
+                            title="Logout"
+                            color="red"
                         />
-                    </ThemedView>
-                ))}
-            </ScrollView>
+                    </>
+                )}
+            </View>
 
-            <Modal transparent={true} visible={modalVisible} animationType="fade">
-                <View
-                    style={{
-                        flex: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        backgroundColor: 'rgba(0,0,0,0.5)',
-                    }}
-                >
-                    <View
-                        style={{
-                            width: 300,
-                            backgroundColor: '#fff',
-                            borderRadius: 12,
-                            padding: 20,
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Text style={{ fontSize: 18, marginBottom: 16 }}>
-                            Ви впевнені?
-                        </Text>
-
+            {/* CATEGORIES */}
+            <ThemedView className="px-5 pt-5 flex-row flex-wrap justify-between">
+                {isLoading ? (
+                    <Text>Loading...</Text>
+                ) : (
+                    data?.map((category: ICategoryResponse) => (
                         <View
-                            style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                width: '100%',
-                            }}
+                            key={category.id}
+                            className="bg-white dark:bg-neutral-900 rounded-2xl shadow w-[48%] mb-4 overflow-hidden"
                         >
-                            <CustomButton
-                                title="Ні"
-                                onPress={() => setModalVisible(false)}
-                                style={{
-                                    flex: 1,
-                                    marginRight: 8,
-                                    backgroundColor: '#ccc',
-                                }}
-                                textStyle={{ color: '#000' }}
+                            <Image
+                                source={{ uri: IMAGES_URL + `/${category.image}` }}
+                                contentFit="cover"
+                                style={{ width: '100%', height: 128 }}
                             />
 
-                            <CustomButton
-                                title="Так"
-                                onPress={async () => {
-                                    if (selectedId === null) return;
+                            <View className="p-3">
+                                <Text className="font-bold text-base dark:text-white">
+                                    {category.name}
+                                </Text>
 
-                                    try {
-                                        setLocalLoading(true);
+                                <Text
+                                    className="text-gray-500 text-sm mt-1"
+                                    numberOfLines={3}
+                                >
+                                    {category.description}
+                                </Text>
 
-                                        await deleteCategory(selectedId).unwrap();
-
-                                        setModalVisible(false);
-                                        setLocalLoading(false);
-                                    } catch (err) {
-                                        console.log(err);
-                                        setLocalLoading(false);
-                                    }
-                                }}
-                                loading={localLoading}
-                                style={{
-                                    flex: 1,
-                                    marginLeft: 8,
-                                    backgroundColor: 'red',
-                                }}
-                                textStyle={{ color: '#fff' }}
-                            />
+                                <TouchableOpacity
+                                    className="py-3 rounded-full bg-red-600 mt-3"
+                                    onPress={() => {
+                                        Alert.alert(
+                                            "Delete Category",
+                                            `Delete "${category.name}"?`,
+                                            [
+                                                {text: "Cancel", style: "cancel"},
+                                                {
+                                                    text: "Delete",
+                                                    style: "destructive",
+                                                    onPress: () =>
+                                                        deleteHandler(category.id),
+                                                },
+                                            ]
+                                        );
+                                    }}
+                                >
+                                    <Text className="text-white text-center">
+                                        Видалити
+                                    </Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
-                    </View>
-                </View>
-            </Modal>
-        </>
+                    ))
+                )}
+            </ThemedView>
+        </ParallaxScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+    reactLogo: {
+        height: 28,
+        width: 290,
+        bottom: 0,
+        left: 0,
+        position: 'absolute',
+    },
+});

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { ScrollView, View, } from 'react-native';
 import { ThemedView } from '@/components/themed-view';
 import { ThemedText } from '@/components/themed-text';
-import { CustomInput } from '@/components/ui/CustomInput';
-import { CustomButton } from '@/components/ui/CustomButton';
-import AvatarPicker from '@/components/ui/AvatarPicker';
+import CustomInput from '@/components/form/CustomInput';
+import CustomButton from '@/components/form/CustomButton';
+import AvatarPicker from '@/components/form/AvatarPicker';
 import { IImageFile } from '@/types/IImageFile';
-import { useAddCategoryMutation } from '@/services/categoryApi';
+import { useCreateCategoryMutation } from '@/services/categoryApi';
 
 
 interface Errors {
@@ -21,7 +21,7 @@ export default function ExploreScreen() {
     const [name, setName] = useState('');
     const [errors, setErrors] = useState<Errors>({});
 
-    const [addCategory, { isLoading }] = useAddCategoryMutation();
+    const [addCategory, { isLoading }] = useCreateCategoryMutation();
 
     const validate = (): Errors => {
         const newErrors: Errors = {};
@@ -107,6 +107,7 @@ export default function ExploreScreen() {
                 )}
 
                 <CustomInput
+                    label="Category Name"
                     value={name}
                     onChangeText={(text) => {
                         setName(text);

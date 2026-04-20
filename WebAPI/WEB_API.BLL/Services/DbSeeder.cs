@@ -9,6 +9,7 @@ using WEB_API.BLL.Dtos.User;
 using WEB_API.BLL.Services.Storage;
 using WEB_API.DAL;
 using WEB_API.DAL.Entities.Identity;
+using WEB_API.DAL.Entities; // <-- припускаємо, що тут CategoryEntity
 
 namespace WEB_API.BLL.Services;
 
@@ -24,6 +25,7 @@ public static class DbSeeder
 
         context.Database.Migrate();
 
+        // --- Seed Roles ---
         if (!roleManager.Roles.Any())
         {
             var roles = Roles.AllRoles.Select(x => new RoleEntity(x)).ToList();
@@ -36,6 +38,8 @@ public static class DbSeeder
                 }
             }
         }
+
+        // --- Seed Users ---
         if (!userManager.Users.Any())
         {
             var json = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Helpers", "JsonData", "Users.json"));
@@ -44,31 +48,67 @@ public static class DbSeeder
             {
                 Console.WriteLine("------ JSON FILE NOT FOUND ----------");
             }
-            foreach (var user in users)
+            else
             {
-                var newUser = new UserEntity()
+                foreach (var user in users)
                 {
-                    Email = user.Email,
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Image = await storage.SaveImageAsync(user.Image),
-                    UserName = user.Email
-                };
-
-                var result = await userManager.CreateAsync(newUser, user.Password);
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRolesAsync(newUser, user.Roles);
-                }
-                else
-                {
-                    Console.WriteLine("------ ERROR WHEN CREATING USER: ");
-                    foreach (var error in result.Errors)
+                    var newUser = new UserEntity()
                     {
-                        Console.WriteLine(error.Description);
+                        Email = user.Email,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Image = await storage.SaveImageAsync(user.Image),
+                        UserName = user.Email
+                    };
+
+                    var result = await userManager.CreateAsync(newUser, user.Password);
+                    if (result.Succeeded)
+                    {
+                        await userManager.AddToRolesAsync(newUser, user.Roles);
+                    }
+                    else
+                    {
+                        Console.WriteLine("------ ERROR WHEN CREATING USER: ");
+                        foreach (var error in result.Errors)
+                        {
+                            Console.WriteLine(error.Description);
+                        }
                     }
                 }
             }
         }
+
+        // --- Seed Categories ---
+        if (!context.Categories.Any())
+        {
+            var json = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Helpers", "JsonData", "categories.json"));
+            var categories = JsonConvert.DeserializeObject<List<CategorySeedDTO>>(json);
+
+            if (categories == null)
+            {
+                Console.WriteLine("------ CATEGORIES JSON FILE NOT FOUND ----------");
+            }
+            else
+            {
+                foreach (var category in categories)
+                {
+                    var newCategory = new CategoryEntity()
+                    {
+                        Name = category.Name,
+                        Image = await storage.SaveImageAsync(category.Image)
+                    };
+
+                    await context.Categories.AddAsync(newCategory);
+                }
+
+                await context.SaveChangesAsync();
+            }
+        }
     }
+}
+
+public class CategorySeedDTO
+{
+    public string Name { get; set; }
+    public string Image { get; set; }
 }

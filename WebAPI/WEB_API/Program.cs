@@ -103,7 +103,10 @@ try
 
     });
 
-
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(5268);
+    });
     var app = builder.Build();
 
     app.UseSerilogRequestLogging();

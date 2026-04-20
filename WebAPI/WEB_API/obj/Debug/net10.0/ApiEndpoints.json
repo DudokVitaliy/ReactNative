@@ -100,22 +100,6 @@
   },
   {
     "ContainingType": "WEB_API.Controllers.CategoryController",
-    "Method": "Delete",
-    "RelativePath": "api/Category/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WEB_API.Controllers.CategoryController",
     "Method": "Update",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "PUT",
@@ -136,6 +120,22 @@
         "Name": "CategoryImage",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WEB_API.Controllers.CategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -4,50 +4,150 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="AvatarPicker">
+    <list default="true" id="afd5cbfb-9978-4e36-8527-77ec3b959e07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/auth/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/register.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/profile/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layouts/FormLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/urls.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/categorySchema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/userLoginSchema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/userRegisterSchema.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/authApi.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/AuthResponse.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/ICategoryResponse.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/ICreateCategory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/IUpdateCategory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/explore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/explore.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/edit-category/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/edit-category/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/AvatarPicker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/form/AvatarPicker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CustomButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/form/CustomButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CustomInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/form/CustomInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/categoryApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/categoryApi.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/ProjectEvaluation/web_api.metadata.v9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/ProjectEvaluation/web_api.metadata.v9.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/ProjectEvaluation/web_api.projects.v9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/ProjectEvaluation/web_api.projects.v9.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/ProjectEvaluation/web_api.strings.v9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/ProjectEvaluation/web_api.strings.v9.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/FileContentIndex/236292ef-7480-4284-84d5-66704a8c9421.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/FileContentIndex/6bdf6891-06f3-4f62-b66b-caf747467f2b.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/FileContentIndex/b1ee9d79-0cf3-4889-938b-8fe1f68de5f5.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/FileContentIndex/e226a24f-b137-4c56-8f12-cf62ade95f4f.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/FileContentIndex/f8e908fc-72be-4268-ba9d-d65ec2818d42.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.backup.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API.slnx/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/CodeChunks.db" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/CodeChunks.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/SemanticSymbols.db" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/.vs/WEB_API/CopilotIndices/17.14.1204.46620/SemanticSymbols.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/Services/DbSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/Services/DbSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/Services/Storage/IStorageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/Services/Storage/IStorageService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/bin/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/WEB_API.BLL.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/ref/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/ref/WEB_API.BLL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/refint/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.BLL/obj/Debug/net10.0/refint/WEB_API.BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/Entities/CategoryEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/Entities/CategoryEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/bin/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/WEB_API.DAL.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/ref/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/ref/WEB_API.DAL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/refint/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API.DAL/obj/Debug/net10.0/refint/WEB_API.DAL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/CategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/CategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_03boq3oe.gib.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_1goef0pr.yy5.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_2osj53ct.zxg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_3e4501vp.udp.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_5gwzbk2q.x0t.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_a14i51cp.1aj.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_ai3jjc5z.5po.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_cin301ya.dcg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_cki1oh00.1oh.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_deykooki.xii.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_emc5ah4t.uar.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_guyta3wf.fhm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_jizs3mxv.rlb.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_lbnqi3sf.r5r.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_mqx1fvvi.adu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_psegku3f.4mu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_tzxflmsv.p5l.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_utvlpdhx.nkf.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_y3gqxl0r.h0i.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/100_zujugash.3t1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_03boq3oe.gib.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_1goef0pr.yy5.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_2osj53ct.zxg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_3e4501vp.udp.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_5gwzbk2q.x0t.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_a14i51cp.1aj.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_ai3jjc5z.5po.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_cin301ya.dcg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_cki1oh00.1oh.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_deykooki.xii.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_emc5ah4t.uar.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_guyta3wf.fhm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_jizs3mxv.rlb.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_lbnqi3sf.r5r.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_mqx1fvvi.adu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_psegku3f.4mu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_tzxflmsv.p5l.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_utvlpdhx.nkf.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_y3gqxl0r.h0i.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/1280_zujugash.3t1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_03boq3oe.gib.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_1goef0pr.yy5.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_2osj53ct.zxg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_3e4501vp.udp.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_5gwzbk2q.x0t.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_a14i51cp.1aj.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_ai3jjc5z.5po.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_cin301ya.dcg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_cki1oh00.1oh.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_deykooki.xii.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_emc5ah4t.uar.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_guyta3wf.fhm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_jizs3mxv.rlb.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_lbnqi3sf.r5r.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_mqx1fvvi.adu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_psegku3f.4mu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_tzxflmsv.p5l.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_utvlpdhx.nkf.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_y3gqxl0r.h0i.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Images/400_zujugash.3t1.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/WEB_API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/WEB_API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.BLL.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.staticwebassets.endpoints.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/WEB_API.staticwebassets.runtime.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/bin/Debug/net10.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ApiEndpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ApiEndpoints.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/EndpointInfo/WEB_API.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/EndpointInfo/WEB_API.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/WEB_API.pdb" afterDir="false" />
@@ -55,21 +155,35 @@
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ref/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/ref/WEB_API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/refint/WEB_API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/refint/WEB_API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rjimswa.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/rpswa.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/staticwebassets.build.endpoints.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/staticwebassets.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/staticwebassets.build.json.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/staticwebassets.development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/staticwebassets.upToDateCheck.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/Debug/net10.0/swae.build.ex.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/WEB_API.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../WebAPI/WEB_API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/09f2c084-706b-4bd0-a853-b51699212e9b.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/10148c5e-ff4f-4850-a46b-58664ab75e18.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/37c25d61-5467-4a3b-8e5d-ded883421398.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/44af0d42-4640-45b8-a359-7f2b63098aa5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/47220bb5-7d86-420f-95cc-cd141c95ffbe.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/4df4ed95-9025-4fdf-9fbb-88109aec1c7d.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/5a63c252-b1dc-444c-840b-7b5648237f4e.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/614ef57e-b438-4ebb-b43e-e4485f9b5675.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/61e705d5-091c-4ade-8dcf-856e2815c7f7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/64ab0c1f-4983-4762-b284-d1318ad874cd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/65781b3c-22bc-4173-b3bc-7e99cb71edfc.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/65ecd609-43cd-4af0-83aa-f872a8892f4b.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/9a6f931f-5ae6-4afa-a12f-9f57102176de.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/9a89baed-5321-4d78-a443-b2dade178fa9.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/9ca41189-dd6a-4568-af95-0fa8ff5fcd2e.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/a2ea6b89-f0ed-4087-9c1c-765e0ef254b9.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/a7fab998-2fbe-42e4-b518-db7ba32b5a78.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/b178e441-e201-4d7a-8f4c-1f582cb99a0c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/be75e147-54a9-46c7-aa39-43578a8c3e77.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/bef1a5a0-6ea8-409b-a8ca-633bf3c0e926.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/cbaff9b1-8c3d-47b6-a260-bb64a1ead33a.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/d005309f-05cb-4bdf-9511-1fa99bfbeb17.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/d15265d2-c6ae-41d9-a832-b9ae077f6940.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/d27dc5f0-1103-4ee0-8f0b-1fc662eb780c.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/d965abc6-aa28-4cda-9dab-8487d8e58494.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/f3162476-c9b1-44dd-ad4d-aaa1b2cea97a.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/f43421fd-8e97-41a4-ab9d-94864c9c1f6c.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/f8e2340a-e24d-4edd-9acf-f8252b071f22.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebAPI/WEB_API/wwwroot/uploads/fa8bf4ca-94e1-4d8a-b637-9946fd161597.JPG" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,10 +253,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TechnoRoom\Desktop\ReactNative\MyApp\components\form" />
+      <recent name="C:\Users\TechnoRoom\Desktop\ReactNative\MyApp\app\auth" />
       <recent name="C:\Users\TechnoRoom\Desktop\ReactNative\MyApp\app" />
       <recent name="C:\Users\TechnoRoom\Desktop\ReactNative\MyApp\app\screens\edit-category" />
       <recent name="C:\Users\TechnoRoom\Desktop\ReactNative\MyApp\app\screens" />
-      <recent name="C:\Users\TechnoRoom\Desktop\ReactNative\MyApp\types" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -169,6 +284,10 @@
       <workItem from="1775155322219" duration="5303000" />
       <workItem from="1775322379652" duration="7621000" />
       <workItem from="1775388536399" duration="2330000" />
+      <workItem from="1775500154162" duration="1594000" />
+      <workItem from="1775575810230" duration="12689000" />
+      <workItem from="1776192641065" duration="4273000" />
+      <workItem from="1776196963035" duration="5246000" />
     </task>
     <task id="LOCAL-00001" summary="QweryRTK">
       <option name="closed" value="true" />

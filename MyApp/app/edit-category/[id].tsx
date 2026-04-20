@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, router } from 'expo-router';
 
-import AvatarPicker from '@/components/ui/AvatarPicker';
-import { CustomButton } from '@/components/ui/CustomButton';
+import AvatarPicker from '@/components/form/AvatarPicker';
+import CustomButton from '@/components/form/CustomButton';
 
 import {
     useGetCategoryByIdQuery,
@@ -38,7 +38,7 @@ export default function EditCategoryScreen() {
     useEffect(() => {
         if (category) {
             setName(category.name);
-            setImage(category.imageUrl || null);
+            setImage(category.image || null);
         }
     }, [category]);
 
@@ -62,7 +62,6 @@ export default function EditCategoryScreen() {
         try {
             const formData = new FormData();
 
-            formData.append('id', String(categoryId));
             formData.append('name', name.trim());
 
             if (file) {
@@ -72,10 +71,14 @@ export default function EditCategoryScreen() {
                     type: file.type,
                 } as any);
             }
-            const updated = await updateCategory(formData).unwrap();
+
+            const updated = await updateCategory({
+                id: categoryId,
+                data: formData,
+            }).unwrap();
 
             setName(updated.name);
-            setImage(updated.imageUrl || null);
+            setImage(updated.image || null);
 
             Alert.alert('Успішно', 'Категорію оновлено');
             router.back();
@@ -94,29 +97,31 @@ export default function EditCategoryScreen() {
     }
 
     return (
-        <ScrollView className="flex-1 p-6 bg-black dark:bg-black">
+        <ScrollView className="flex-1 p-6 bg-black">
             <View className="mb-6 justify-center items-center">
-                <Text className="text-xl font-semibold mb-5 text-gray-900 dark:text-white">
+                <Text className="text-xl font-semibold mb-5 text-white">
                     Змінити назву категорії
                 </Text>
+
                 <TextInput
                     value={name}
                     onChangeText={setName}
                     placeholder="Введіть назву"
                     placeholderTextColor="#888"
-                    className="mb-4 border border-gray-300 dark:border-gray-600 rounded-xl p-4 text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-800"
+                    className="w-full mb-4 border border-gray-600 rounded-xl p-4 text-white bg-gray-800"
                 />
             </View>
 
-            <View className="mb-6 justify-center items-center border border-gray-300 dark:border-yellow-500 rounded-xl">
-                <Text className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+            <View className="mb-6 justify-center items-center border border-gray-600 rounded-xl p-4">
+                <Text className="text-xl font-semibold mb-2 text-white">
                     Змінити фото категорії
                 </Text>
+
                 <AvatarPicker
-                    image={file ? file.uri : image} // превʼю: нове фото або старе
+                    image={file ? file.uri : image}
                     onChange={(selectedFile: IImageFile) => {
                         setFile(selectedFile);
-                        setImage(selectedFile.uri); // превʼю одразу
+                        setImage(selectedFile.uri);
                     }}
                 />
             </View>
